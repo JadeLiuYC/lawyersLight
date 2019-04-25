@@ -26,45 +26,101 @@
 //
 //
 //
-
-var FAIL_CONTENT = '<p>获取信息失败</p>';var _default =
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default =
 {
   data: function data() {
     return {
-      banner: {},
-      content: '' };
+      store: false,
+      storetit: "收藏" };
 
   },
-  onShareAppMessage: function onShareAppMessage() {
-    return {
-      title: this.banner.title,
-      path: '/pages/detail/detail?query=' + JSON.stringify(this.banner) };
 
-  },
   onLoad: function onLoad(event) {
-    // 目前在某些平台参数会被主动 decode，暂时这样处理。
-    try {
-      this.banner = JSON.parse(decodeURIComponent(event.query));
-    } catch (error) {
-      this.banner = JSON.parse(event.query);
-    }
-
     this.getDetail();
-    uni.setNavigationBarTitle({
-      title: this.banner.title });
-
   },
   methods: {
-    getDetail: function getDetail() {var _this = this;
-      uni.request({
-        url: 'https://unidemo.dcloud.net.cn/api/news/36kr/' + this.banner.post_id,
-        success: function success(result) {
-          if (result.statusCode == 200) {
-            _this.content = result.data.content;
-          } else {
-            _this.content = FAIL_CONTENT;
-          }
-        } });
+    getDetail: function getDetail() {
+
+    },
+    fnStore: function fnStore() {
+      this.store = true;
+      this.storetit = "已收藏";
+    },
+    addfriend: function addfriend() {
+      uni.navigateTo({
+        url: "../qrcode/qrcode" });
+
+    },
+    tel: function tel(phone) {
+      uni.makePhoneCall({
+        phoneNumber: phone });
+
+    },
+    comment: function comment(index) {
+      uni.showToast({
+        title: index,
+        icon: 'none' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))

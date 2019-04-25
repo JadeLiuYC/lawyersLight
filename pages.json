@@ -1,47 +1,173 @@
 {
 	"pages": [
 		{
-		    "path" : "pages/login/login",
-		    "style" : {
-				"navigationBarTitleText": "登录"
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTextStyle":"black",
+				"navigationStyle":"custom",
+				"app-plus": {  
+					"titleNView": false  
+				} 
 			}
 		},
 		{
-			"path": "pages/list/list",
-			"style": {}
+		    "path" : "pages/uploadImg/uploadImg",
+		    "style" : {
+		    	"navigationBarTitleText": "",
+		    	"navigationBarBackgroundColor":"#bfd5ec",
+		    	"navigationStyle":"custom",
+		    	"app-plus": {  
+		    		"titleNView": false  
+		    	} 
+		    }
 		},
 		{
-			"path": "pages/detail/detail",
-			"style": {}
+		    "path" : "pages/uploadInfo/uploadInfo",
+		    "style" : {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor":"#bfd5ec",
+				"navigationStyle":"custom",
+				"app-plus": {  
+					"titleNView": false  
+				} 
+			}
 		},
 		{
 			"path": "pages/ucenter/ucenter",
 			"style": {
-				"navigationBarTitleText": "个人中心"
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor":"#bfd5ec",
+				"navigationStyle":"custom",
+				"app-plus": {  
+					"titleNView": false  
+				} 
+			}
+		},
+		{
+		    "path" : "pages/contractdetail/contractdetail",
+		    "style" : {
+				"navigationBarTitleText":"合同模板"
+			}
+		},
+		{
+		    "path" : "pages/login/login",
+		    "style" : {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor":"#bfd5ec"
+			}
+		},
+		{
+		    "path" : "pages/qrcode/qrcode",
+		    "style": {
+		    	"navigationBarTitleText":"",
+				"navigationBarBackgroundColor":"#f8f6f9",
+				"titleNView":{
+					"buttons":[
+						{
+							"float":"right",
+							"text":"保存至相册",
+							"color":"#666666",
+							"fontSize":"13px",
+							"width":"80px"
+							
+						}
+					]
+				}
+		    }
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText":"律师介绍"
+			}
+		},
+		{
+		    "path" : "pages/contract/contract",
+		    "style": {
+		    	"app-plus":{
+		    		"titleNView":{
+		    			"searchInput":{
+		    				"backgroundColor":"#f8f6f9",
+		    				"borderRadius":"20px",
+		    				"placeholder":"请输入关键词搜索合同",
+		    				"placeholderColor":"#959496",
+		    				"disabled":false
+		    			}
+		    		}
+		    	}
+		    }
+		},
+		{
+		    "path" : "pages/list/list",
+		    "style" : {
+				"app-plus":{
+					"titleNView":{
+						"searchInput":{
+							"backgroundColor":"#f8f6f9",
+							"borderRadius":"20px",
+							"placeholder":"输入律师姓名或关键词搜索",
+							"placeholderColor":"#959496",
+							"disabled":false
+						}
+					}
+				}
 			}
 		}
+        ,{
+            "path" : "pages/aboutUs/aboutUs",
+            "style" : {
+				"navigationBarTitleText":"关于我们"
+			}
+        }
+        ,{
+            "path" : "pages/store/store",
+            "style" : {
+				"navigationBarTitleText":"我的收藏"
+			}
+        }
+        ,{
+            "path" : "pages/message/message",
+            "style" : {
+				"navigationBarTitleText":"意见反馈"
+			}
+        }
+        ,{
+            "path" : "pages/invite/invite",
+            "style" : {
+				"navigationBarTitleText":"邀请好友"
+			}
+        }
     ],
 	"tabBar":{
-		"color": "#000000",
-		"selectedColor": "#2F85FC",
+		"color": "#a4a3a2",
+		"selectedColor": "#333333",
 		"backgroundColor": "#FFFFFF",
 		"borderStyle": "black",
-		"list":[{
-			"pagePath": "pages/list/list",
-			"iconPath": "static/home.png",
-			"selectedIconPath": "static/home-active.png",
-			"text": "首页"
-		},{
-			"pagePath": "pages/ucenter/ucenter",
-			"iconPath": "static/center.png",
-			"selectedIconPath": "static/center-active.png",
-			"text": "我的"
-		}]
+		"list":[
+			{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/list/list",
+				"iconPath": "static/lawyer.png",
+				"selectedIconPath": "static/lawyer-active.png",
+				"text": "找律师"
+			},
+			{
+				"pagePath": "pages/ucenter/ucenter",
+				"iconPath": "static/mine.png",
+				"selectedIconPath": "static/mine-active.png",
+				"text": "我的"
+			}
+		]
 	},
 	"globalStyle":{
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "首页",
-		"navigationBarBackgroundColor": "#2F85FC",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "中国律师黄页",
+		"navigationBarBackgroundColor": "#ffffff",
 		"backgroundColor": "#FFFFFF"
 	}
 }

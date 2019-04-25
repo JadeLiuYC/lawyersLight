@@ -1,33 +1,49 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/uploadImg/uploadImg",
+    "pages/uploadInfo/uploadInfo",
+    "pages/ucenter/ucenter",
+    "pages/contractdetail/contractdetail",
     "pages/login/login",
-    "pages/list/list",
+    "pages/qrcode/qrcode",
     "pages/detail/detail",
-    "pages/ucenter/ucenter"
+    "pages/contract/contract",
+    "pages/list/list",
+    "pages/aboutUs/aboutUs",
+    "pages/store/store",
+    "pages/message/message",
+    "pages/invite/invite"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "首页",
-    "navigationBarBackgroundColor": "#2F85FC",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "中国律师黄页",
+    "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#FFFFFF"
   },
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#2F85FC",
+    "color": "#a4a3a2",
+    "selectedColor": "#333333",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/home/home",
         "iconPath": "static/home.png",
         "selectedIconPath": "static/home-active.png",
         "text": "首页"
       },
       {
+        "pagePath": "pages/list/list",
+        "iconPath": "static/lawyer.png",
+        "selectedIconPath": "static/lawyer-active.png",
+        "text": "找律师"
+      },
+      {
         "pagePath": "pages/ucenter/ucenter",
-        "iconPath": "static/center.png",
-        "selectedIconPath": "static/center-active.png",
+        "iconPath": "static/mine.png",
+        "selectedIconPath": "static/mine-active.png",
         "text": "我的"
       }
     ]

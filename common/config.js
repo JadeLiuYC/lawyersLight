@@ -1,5 +1,5 @@
 const urlArr = {
-	baseUrl:"http://greenjinyi.nat300.top/api/",
+	baseUrl:"https://ll.greenjinyi.com/api/",
 }
 const uniAjax = function (obj){
 	try {
@@ -21,7 +21,7 @@ const uniAjax = function (obj){
 							url: '',
 						});
 					}else if(res.code == 0){
-						obj.success(res);
+						obj.success(res.data);
 					}
 			    },
 				fail: (err) => {
@@ -32,16 +32,9 @@ const uniAjax = function (obj){
 				}
 			});
 		}else{
-			//若无token 
-			//1、小程序首先获取code判断是否存在用户，不存在则注册并绑定手机号; 2、App则跳转至登录页
-			// #ifdef MP-WEIXIN
-				wxLogin();
-			// #endif
-			// #ifdef APP-PLUS
-				uni.reLaunch({
-					url:'/pages/login/login'
-				})
-			// #endif
+			uni.reLaunch({
+				url:'/pages/login/login'
+			})
 		}
 	} catch (e) {
 		// error

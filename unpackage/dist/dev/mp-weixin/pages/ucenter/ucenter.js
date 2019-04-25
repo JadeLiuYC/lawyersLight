@@ -8,7 +8,36 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -57,15 +86,62 @@ var _default =
     return {
       login: false,
       avatarUrl: '/static/logo.png',
-      uerInfo: {} };
+      userInfo: {},
+      loginTit: '登录' };
 
+  },
+  onLoad: function onLoad() {
+    var userInfo = uni.getStorageSync("userInfo");
+    if (userInfo) {
+      var userInfo = JSON.parse(userInfo);
+      this.login = true;
+      this.userInfo = userInfo;
+    } else {
+      this.login = false;
+    }
   },
   methods: {
     goLogin: function goLogin() {
       if (!this.login) {
-        console.log('点击前往登录');
+        uni.navigateTo({
+          url: '../login/login' });
+
+      } else {
+        uni.setStorageSync("userInfo", "");
+        this.onLoad();
       }
+    },
+    goContract: function goContract() {
+      uni.navigateTo({
+        url: "../contract/contract" });
+
+    },
+    store: function store() {
+      uni.navigateTo({
+        url: "../store/store" });
+
+    },
+    message: function message() {
+      uni.navigateTo({
+        url: "../message/message" });
+
+    },
+    upload: function upload() {
+      uni.navigateTo({
+        url: "../uploadInfo/uploadInfo" });
+
+    },
+    invite: function invite() {
+      uni.navigateTo({
+        url: "../invite/invite" });
+
+    },
+    aboutUs: function aboutUs() {
+      uni.navigateTo({
+        url: "../aboutUs/aboutUs" });
+
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
