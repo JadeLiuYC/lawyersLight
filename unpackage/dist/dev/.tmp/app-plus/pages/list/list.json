@@ -1,0 +1,12 @@
+{
+  "titleNView": {
+    "searchInput": {
+      "backgroundColor": "#f8f6f9",
+      "borderRadius": "20px",
+      "placeholder": "输入律师姓名或关键词搜索",
+      "placeholderColor": "#959496",
+      "disabled": false
+    }
+  },
+  "usingComponents": {}
+}

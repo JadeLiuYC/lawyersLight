@@ -1,0 +1,42 @@
+
+page{
+	background-color: #f8f6f9;
+}
+.qrcodebox{
+	width: 666rpx;
+	text-align: center;
+	margin: 145rpx auto 0 auto;
+	background-color: #ffffff;
+	position: relative;
+	padding-top: 100rpx;
+	padding-bottom: 40rpx;
+}
+.avator{
+	width: 172rpx;
+	height: 172rpx;
+	position: absolute;
+	left: 50%;
+	margin-left: -86rpx;
+	top: -86rpx;
+	border-radius: 50%;
+}
+.name{
+	text-align: center;
+	width: 50%;
+	color: #ffffff;
+	margin: 10rpx auto;
+	padding: 10rpx 0;
+	border-radius: 50rpx;
+	background-color: #f47505;
+}
+.tit{
+	text-align: center;
+	font-size: 24rpx;
+	color: #666666;
+}
+.qrcode{
+	width: 500rpx;
+	height: 500rpx;
+	margin-top: 30rpx;
+}
+

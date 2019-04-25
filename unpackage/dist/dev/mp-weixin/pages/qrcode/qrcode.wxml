@@ -1,0 +1,1 @@
+<view class="page-body" bind:__l="__l"><view class="qrcodebox"><image class="avator" src="../../static/avatar_2.png"></image><view class="name">二维码名片：张律师</view><view class="tit"><view>将二维码保存至相册</view><view>使用微信扫描二维码，添加好友</view></view><image class="qrcode" src="../../static/avatar_1.png"></image></view></view>

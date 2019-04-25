@@ -1,0 +1,12 @@
+{
+  "titleNView": {
+    "searchInput": {
+      "backgroundColor": "#f8f6f9",
+      "borderRadius": "20px",
+      "placeholder": "请输入关键词搜索合同",
+      "placeholderColor": "#959496",
+      "disabled": false
+    }
+  },
+  "usingComponents": {}
+}

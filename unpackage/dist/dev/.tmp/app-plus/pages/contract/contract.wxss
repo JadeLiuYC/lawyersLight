@@ -1,0 +1,68 @@
+
+.page-body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+}
+.nav-left {
+	width: 25%;
+}
+.nav-left-item {
+	height: 100rpx;
+	font-size: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.nav-left-item .tit{
+	font-size: 24rpx;
+	padding: 0 30rpx;
+	border-radius: 30rpx;
+}
+.nav-right {
+	width: 75%;
+	background-color: #f8f6f9;
+	padding-top: 15rpx;
+}
+.nav-right-item {
+	width: 33%;
+	float: left;
+	text-align: center;
+	margin-bottom: 20rpx;
+}
+.nav-right-item image {
+	width: 80%;
+	height: 200rpx;
+}
+.nav-right-item .tit{
+	font-size: 20rpx;
+	width: 100%;
+	height: 28rpx;
+	line-height: 28rpx;
+	overflow: hidden;
+}
+.nav-left-item.active .tit {
+	background-color: #f47505;
+	color: #fff;
+}
+

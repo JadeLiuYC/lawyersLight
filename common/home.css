@@ -1,0 +1,12 @@
+.uni-list{
+	overflow: hidden;
+}
+.uni-list-item{
+	width: 48%;
+}
+.uni-list-item:nth-of-type(2n+1){
+	float: left;
+}
+.uni-list-item:nth-of-type(2n){
+	float: right;
+}
