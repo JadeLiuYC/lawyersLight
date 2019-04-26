@@ -1,14 +1,14 @@
 {
-    "name" : "律师之光",
+    "name" : "找律师",
     "appid" : "__UNI__C4AF583",
-    "description" : "律师之光",
+    "description" : "找律师",
     "versionName" : "1.0.0",
     "versionCode" : 1,
     "transformPx" : false,
     "app-plus" : {
-		"softinput" : {
+        "softinput" : {
             "mode" : "adjustPan"
-		},
+        },
         "usingComponents" : true,
         /* 5+App特有相关 */
         "modules" : {},
@@ -65,6 +65,6 @@
             "mode" : "history"
         },
         "template" : "",
-        "title" : "律师之光"
+        "title" : "找律师"
     }
 }

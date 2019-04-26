@@ -4,14 +4,14 @@
 			//App检测更新，提示用户下载
 			//#ifdef APP-PLUS  
 			var server = "https://www.example.com/update"; //检查更新地址   
-			uni.request({  
+			uni.request({
 				url: server,  
 				success: (res) => {
-					if (res.statusCode == 200 && res.data.status === 1) {  
+					if (res.statusCode == 200 && res.data.status === 1) {
 						uni.showModal({ //提醒用户更新  
 							title: "更新提示",  
 							content: res.data.note,  
-							success: (res) => {  
+							success: (res) => {
 								if (res.confirm) { 
 									//下载安装包
 									uni.downloadFile({

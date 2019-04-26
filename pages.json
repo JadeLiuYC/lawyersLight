@@ -61,17 +61,19 @@
 		    "style": {
 		    	"navigationBarTitleText":"",
 				"navigationBarBackgroundColor":"#f8f6f9",
-				"titleNView":{
-					"buttons":[
-						{
-							"float":"right",
-							"text":"保存至相册",
-							"color":"#666666",
-							"fontSize":"13px",
-							"width":"80px"
-							
-						}
-					]
+				"app-plus":{
+					"titleNView":{
+						"buttons":[
+							{
+								"float":"right",
+								"text":"保存至相册",
+								"color":"#666666",
+								"fontSize":"13px",
+								"width":"80px"
+								
+							}
+						]
+					}
 				}
 		    }
 		},
@@ -84,6 +86,7 @@
 		{
 		    "path" : "pages/contract/contract",
 		    "style": {
+				"navigationBarTitleText":"合同模板",
 		    	"app-plus":{
 		    		"titleNView":{
 		    			"searchInput":{
@@ -137,6 +140,10 @@
 				"navigationBarTitleText":"邀请好友"
 			}
         }
+        ,{
+            "path" : "pages/bindphone/bindphone",
+            "style" : {}
+        }
     ],
 	"tabBar":{
 		"color": "#a4a3a2",
@@ -166,7 +173,7 @@
 	},
 	"globalStyle":{
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "中国律师黄页",
+		"navigationBarTitleText": "找律师",
 		"navigationBarBackgroundColor": "#ffffff",
 		"backgroundColor": "#FFFFFF"
 	}

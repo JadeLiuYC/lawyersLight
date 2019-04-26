@@ -5,6 +5,11 @@
 			<view class="top_view"></view>
 		</view>  
 		<!-- #endif -->
+		<!-- #ifdef MP-WEIXIN -->
+			<view class="input-search">
+				<input class="uni-input" confirm-type="search" placeholder="请输入关键词搜索" />
+			</view>
+		<!-- #endif -->
 		<view class="page-body">
 			<scroll-view class="nav-left" scroll-y :style="'height:'+height+'px'">
 				<view class="nav-left-item" @click="categoryClickMain(item,index)" :key="index" :class="index==categoryActive?'active':''"
@@ -133,5 +138,18 @@
 		background-color: #f47505;
 		color: #fff;
 	}
+	/* #ifdef MP-WEIXIN */
+	.input-search{
+		width: 100%;
+		box-sizing: border-box;
+		padding:15upx 30upx;
+	}
+	.uni-input{
+		padding: 0 20rpx;
+		background-color: #f8f6f9;
+		border-radius: 50upx;
+		height: 60rpx;
+	}
+	/* #endif */
 </style>
 

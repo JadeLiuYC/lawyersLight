@@ -1,19 +1,11 @@
 <template>
 	<view class="page">
-		<view class="uni-tabs">
-			<view class="uni-tab">
-				<text class="tit">全国</text>
-				<text class="uni-icon uni-icon-arrowdown"></text>
+		<!-- #ifdef MP-WEIXIN -->
+			<view class="input-search">
+				<input class="uni-input" confirm-type="search" placeholder="请输入律师姓名搜索" />
 			</view>
-			<view class="uni-tab">
-				<text class="tit">擅长领域</text>
-				<text class="uni-icon uni-icon-arrowdown"></text>
-			</view>
-			<view class="uni-tab">
-				<text class="tit">智能排序</text>
-				<text class="uni-icon uni-icon-arrowdown"></text>
-			</view>
-		</view>
+		<!-- #endif -->
+		<uni-select :top="top" :selects="selects" @selects-change="selectsChange"></uni-select>
 		<view class="uni-lists">
 			<view class="uni-lists-item" @tap="goDetail">
 				<view class="avatarbox">
@@ -24,7 +16,7 @@
 					<view class="uni-infobox">
 						<view class="info">
 							<view class="name">光头强</view>
-							<view class="address"><image class="img" src="../../static/icon-location.png"></image><text class="tit">河南 • 郑州</text></view>
+							<view class="address"><image class="img" src="../../static/icon-location.png"></image><text class="tit">河南•郑州</text></view>
 							<view class="shop">黄金大壮律师事务所</view>
 						</view>
 						<view class="contact">
@@ -42,11 +34,94 @@
 </template>
 
 <script>
-	import config from '@/common/config.js'; 
+	import config from '@/common/config.js';
+	import uniSelect from "@/components/uni-select/uni-select.vue";
 	export default {
+		components:{
+			uniSelect
+		},
 		data() {
 			return {
-				keyword:''
+				keyword:'',
+				// #ifdef APP-PLUS
+				top:0,
+				// #endif
+				// #ifdef MP-WEIXIN
+				top:44,
+				// #endif
+				selects:[
+					{
+						id:1,
+						name:"全国",
+						isSelect:false,
+						arr:[
+							{
+								id:11,
+								name:"郑州",
+								isSelect:false
+							},
+							{
+								id:12,
+								name:"上海",
+								isSelect:false
+							},
+							{
+								id:13,
+								name:"北京",
+								isSelect:false
+							},
+							{
+								id:14,
+								name:"深圳",
+								isSelect:false
+							}
+						]
+					},
+					{
+						id:2,
+						name:"擅长领域",
+						isSelect:false,
+						arr:[
+							{
+								id:21,
+								name:"婚姻家事",
+								isSelect:false
+							},
+							{
+								id:22,
+								name:"房产土地",
+								isSelect:false
+							},
+							{
+								id:23,
+								name:"民事纠纷",
+								isSelect:false
+							}
+						]
+					},
+					{
+						id:3,
+						name:"智能排序",
+						isSelect:false,
+						arr:[
+							{
+								id:31,
+								name:"综合",
+								isSelect:false
+							},
+							{
+								id:32,
+								name:"浏览量",
+								isSelect:false
+							},
+							{
+								id:33,
+								name:"信用",
+								isSelect:false
+							}
+						]
+					}
+				]
 			}
 		},
 		onLoad() {
@@ -62,11 +137,15 @@
 			this.keyword = event.text;
 			console.log(event.text);
 		},
+		
 		methods: {
 			goDetail(){
 				uni.navigateTo({
 					url:"../detail/detail"
 				})
+			},
+			selectsChange(obj){
+				this.selects = obj;
 			}
 		}
 	}
@@ -176,4 +255,26 @@
 		border-radius: 10upx;
 		padding: 0 8upx;
 	}
+	/* #ifdef MP-WEIXIN */
+	.input-search{
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		box-sizing: border-box;
+		padding:15upx 30upx;
+	}
+	.uni-input{
+		padding: 0 20rpx;
+		background-color: #f8f6f9;
+		border-radius: 50upx;
+		height: 60rpx;
+	}
+	.uni-tabs{
+		top: 90rpx;
+	}
+	.uni-lists {
+		padding-top:160rpx;
+	}
+	/* #endif */
 </style>

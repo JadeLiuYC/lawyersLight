@@ -5,12 +5,12 @@
     "iPad"
   ],
   "id": "__UNI__C4AF583",
-  "name": "律师之光",
+  "name": "找律师",
   "version": {
     "name": "1.0.0",
     "code": 1
   },
-  "description": "律师之光",
+  "description": "找律师",
   "launch_path": "__uniapptabbar.html",
   "developer": {
     "name": "",

@@ -129,3 +129,26 @@
 	padding: 0 8rpx;
 }
 
+.input-search{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding:15rpx 30rpx;
+}
+.uni-input{
+	padding: 0 20rpx;
+	background-color: #f8f6f9;
+	border-radius: 50rpx;
+	height: 60rpx;
+}
+.uni-tabs{
+	top: 90rpx;
+}
+.uni-lists {
+	padding-top:160rpx;
+}
+
+

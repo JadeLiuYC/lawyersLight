@@ -1,10 +1,8 @@
 <template>
 	<view class="page-body">
-		<!-- #ifdef APP-PLUS -->  
 		<view class="status_bar">  
 			<view class="top_view"></view>
 		</view>  
-		<!-- #endif -->
 		<view class="bgTop">
 			<text class="uni-icon uni-icon-arrowleft" @tap="goBack"></text>
 		</view>

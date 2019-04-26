@@ -7069,10 +7069,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\common\\config.js":
-/*!*************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/common/config.js ***!
-  \*************************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\common\\config.js":
+/*!*********************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/common/config.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7135,27 +7135,45 @@ function wxLogin() {
       }
     } });
 
-}var _default =
+}
+
+var isLogin = function isLogin(callback) {
+  var token = uni.getStorageSync("token");
+  if (!token) {
+    uni.showToast({
+      title: "请先登录",
+      icon: "none" });
+
+    setTimeout(function () {
+      uni.navigateTo({
+        url: "../login/login" });
+
+    }, 1500);
+  } else {
+    callback();
+  }
+};var _default =
 
 {
   urlArr: urlArr,
   uniAjax: uniAjax,
-  wxLogin: wxLogin };exports.default = _default;
+  wxLogin: wxLogin,
+  isLogin: isLogin };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js":
-/*!****************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js ***!
-  \****************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js":
+/*!************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "F:\\项目目录\\HbuilderX项目\\律师之光\\App.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\App.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 _vue.default.config.productionTip = false;
 
@@ -7169,248 +7187,265 @@ createApp(app).$mount();
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2FaboutUs%2FaboutUs\"}":
-/*!*****************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2FaboutUs%2FaboutUs"} ***!
-  \*****************************************************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2FaboutUs%2FaboutUs\"}":
+/*!*************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2FaboutUs%2FaboutUs"} ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _aboutUs = _interopRequireDefault(__webpack_require__(/*! ./pages/aboutUs/aboutUs.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\aboutUs\\aboutUs.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _aboutUs = _interopRequireDefault(__webpack_require__(/*! ./pages/aboutUs/aboutUs.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\aboutUs\\aboutUs.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_aboutUs.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fcontract%2Fcontract\"}":
-/*!*******************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fcontract%2Fcontract"} ***!
-  \*******************************************************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fbindphone%2Fbindphone\"}":
+/*!*****************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fbindphone%2Fbindphone"} ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _contract = _interopRequireDefault(__webpack_require__(/*! ./pages/contract/contract.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\contract\\contract.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _bindphone = _interopRequireDefault(__webpack_require__(/*! ./pages/bindphone/bindphone.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\bindphone\\bindphone.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_bindphone.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fcontract%2Fcontract\"}":
+/*!***************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fcontract%2Fcontract"} ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _contract = _interopRequireDefault(__webpack_require__(/*! ./pages/contract/contract.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\contract\\contract.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_contract.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fcontractdetail%2Fcontractdetail\"}":
-/*!*******************************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fcontractdetail%2Fcontractdetail"} ***!
-  \*******************************************************************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fcontractdetail%2Fcontractdetail\"}":
+/*!***************************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fcontractdetail%2Fcontractdetail"} ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _contractdetail = _interopRequireDefault(__webpack_require__(/*! ./pages/contractdetail/contractdetail.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\contractdetail\\contractdetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _contractdetail = _interopRequireDefault(__webpack_require__(/*! ./pages/contractdetail/contractdetail.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\contractdetail\\contractdetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_contractdetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fdetail%2Fdetail\"}":
-/*!***************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fdetail%2Fdetail"} ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _detail = _interopRequireDefault(__webpack_require__(/*! ./pages/detail/detail.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\detail\\detail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_detail.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fhome%2Fhome\"}":
-/*!***********************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _home = _interopRequireDefault(__webpack_require__(/*! ./pages/home/home.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\home\\home.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_home.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Finvite%2Finvite\"}":
-/*!***************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Finvite%2Finvite"} ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _invite = _interopRequireDefault(__webpack_require__(/*! ./pages/invite/invite.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\invite\\invite.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_invite.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Flist%2Flist\"}":
-/*!***********************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Flist%2Flist"} ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _list = _interopRequireDefault(__webpack_require__(/*! ./pages/list/list.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\list\\list.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_list.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Flogin%2Flogin\"}":
-/*!*************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Flogin%2Flogin"} ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _login = _interopRequireDefault(__webpack_require__(/*! ./pages/login/login.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\login\\login.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_login.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fmessage%2Fmessage\"}":
-/*!*****************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fmessage%2Fmessage"} ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _message = _interopRequireDefault(__webpack_require__(/*! ./pages/message/message.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\message\\message.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_message.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fqrcode%2Fqrcode\"}":
-/*!***************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fqrcode%2Fqrcode"} ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _qrcode = _interopRequireDefault(__webpack_require__(/*! ./pages/qrcode/qrcode.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\qrcode\\qrcode.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_qrcode.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fstore%2Fstore\"}":
-/*!*************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fstore%2Fstore"} ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _store = _interopRequireDefault(__webpack_require__(/*! ./pages/store/store.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\store\\store.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_store.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2Fucenter%2Fucenter\"}":
-/*!*****************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2Fucenter%2Fucenter"} ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _ucenter = _interopRequireDefault(__webpack_require__(/*! ./pages/ucenter/ucenter.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\ucenter\\ucenter.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_ucenter.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2FuploadImg%2FuploadImg\"}":
-/*!*********************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2FuploadImg%2FuploadImg"} ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadImg/uploadImg.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\uploadImg\\uploadImg.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_uploadImg.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
-
-/***/ }),
-
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\main.js?{\"page\":\"pages%2FuploadInfo%2FuploadInfo\"}":
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fdetail%2Fdetail\"}":
 /*!***********************************************************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/main.js?{"page":"pages%2FuploadInfo%2FuploadInfo"} ***!
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fdetail%2Fdetail"} ***!
   \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _uploadInfo = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadInfo/uploadInfo.vue */ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages\\uploadInfo\\uploadInfo.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _detail = _interopRequireDefault(__webpack_require__(/*! ./pages/detail/detail.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\detail\\detail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_detail.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fhome%2Fhome\"}":
+/*!*******************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _home = _interopRequireDefault(__webpack_require__(/*! ./pages/home/home.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\home\\home.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_home.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Finvite%2Finvite\"}":
+/*!***********************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Finvite%2Finvite"} ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _invite = _interopRequireDefault(__webpack_require__(/*! ./pages/invite/invite.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\invite\\invite.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_invite.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Flist%2Flist\"}":
+/*!*******************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Flist%2Flist"} ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _list = _interopRequireDefault(__webpack_require__(/*! ./pages/list/list.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\list\\list.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_list.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Flogin%2Flogin\"}":
+/*!*********************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Flogin%2Flogin"} ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _login = _interopRequireDefault(__webpack_require__(/*! ./pages/login/login.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\login\\login.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_login.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fmessage%2Fmessage\"}":
+/*!*************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fmessage%2Fmessage"} ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _message = _interopRequireDefault(__webpack_require__(/*! ./pages/message/message.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\message\\message.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_message.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fqrcode%2Fqrcode\"}":
+/*!***********************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fqrcode%2Fqrcode"} ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _qrcode = _interopRequireDefault(__webpack_require__(/*! ./pages/qrcode/qrcode.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\qrcode\\qrcode.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_qrcode.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fstore%2Fstore\"}":
+/*!*********************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fstore%2Fstore"} ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _store = _interopRequireDefault(__webpack_require__(/*! ./pages/store/store.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\store\\store.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_store.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2Fucenter%2Fucenter\"}":
+/*!*************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2Fucenter%2Fucenter"} ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _ucenter = _interopRequireDefault(__webpack_require__(/*! ./pages/ucenter/ucenter.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\ucenter\\ucenter.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_ucenter.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2FuploadImg%2FuploadImg\"}":
+/*!*****************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2FuploadImg%2FuploadImg"} ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _uploadImg = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadImg/uploadImg.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\uploadImg\\uploadImg.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_uploadImg.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\main.js?{\"page\":\"pages%2FuploadInfo%2FuploadInfo\"}":
+/*!*******************************************************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/main.js?{"page":"pages%2FuploadInfo%2FuploadInfo"} ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _uploadInfo = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadInfo/uploadInfo.vue */ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages\\uploadInfo\\uploadInfo.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_uploadInfo.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "F:\\项目目录\\HbuilderX项目\\律师之光\\pages.json":
-/*!*******************************************!*\
-  !*** F:/项目目录/HbuilderX项目/律师之光/pages.json ***!
-  \*******************************************/
+/***/ "F:\\项目目录\\HbuilderX项目\\lawyersLight\\pages.json":
+/*!***************************************************!*\
+  !*** F:/项目目录/HbuilderX项目/lawyersLight/pages.json ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

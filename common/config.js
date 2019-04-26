@@ -58,8 +58,26 @@ function wxLogin(){
 	});
 }
 
+const isLogin = function(callback){
+	const token = uni.getStorageSync("token");
+	if(!token){
+		uni.showToast({
+			title: "请先登录",
+			icon: "none"
+		})
+		setTimeout(function(){
+			uni.navigateTo({
+				url:"../login/login"
+			})
+		},1500)
+	}else{
+		callback();
+	}
+}
+
 export default {
 	urlArr,
 	uniAjax,
-	wxLogin
+	wxLogin,
+	isLogin
 }

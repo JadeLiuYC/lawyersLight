@@ -13,12 +13,13 @@
     "pages/aboutUs/aboutUs",
     "pages/store/store",
     "pages/message/message",
-    "pages/invite/invite"
+    "pages/invite/invite",
+    "pages/bindphone/bindphone"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "中国律师黄页",
+    "navigationBarTitleText": "找律师",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#FFFFFF"
   },

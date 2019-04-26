@@ -66,3 +66,19 @@
 	color: #fff;
 }
 
+
+.input-search{
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding:15rpx 30rpx;
+}
+.uni-input{
+	padding: 0 20rpx;
+	background-color: #f8f6f9;
+	border-radius: 50rpx;
+	height: 60rpx;
+}
+
+
+

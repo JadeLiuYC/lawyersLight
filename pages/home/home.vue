@@ -6,7 +6,7 @@
 		</view>  
 		<!-- #endif --> 
 		<view class="titlebox">
-			<text>中国律师黄页</text>
+			<text>找律师</text>
 		</view>
 		<view class="input-box">
 			<view class="input-view">
@@ -54,7 +54,7 @@
 				</view>
 			</view>
 			<view class="uni-lists-list">
-				<view class="uni-list-item" v-for="(item, index) in lists" :key="item.id" :style="{background:colorArr[index%4].bgColor}" @tap="goDetail(item.id)">
+				<view class="uni-list-item" v-for="(item, index) in lists" :key="item.id" :style="{backgroundColor:colorArr[index%4].bgColor}" @tap="goDetail(item.id)">
 					<view class="uni-list-item-info">
 						<text class="name" :style="{color:colorArr[index%4].infoColor}">{{item.name}}</text>
 						<text class="info" :style="{color:colorArr[index%4].infoColor}">{{item.address}}</text>
@@ -284,7 +284,10 @@
 		width: 335upx;
 		height: 180upx;
 		position: relative;
-		background-color: #89c997;
+		background-image: url(../../static/home_bg.png);
+		background-repeat: no-repeat;
+		background-size: 58upx 81upx;
+		background-position: 255upx 20upx; 
 		border-radius: 10upx;
 		padding:15upx 30upx 0 30upx;
 		box-sizing: border-box;

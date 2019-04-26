@@ -1,0 +1,96 @@
+
+.page-body{
+	padding: 0 30rpx;
+}
+.uni-lists-item{
+	color: #818a99;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-bottom: 1px solid #f5f5f5;
+	padding:20rpx 0;
+}
+.uni-lists-item .avatarbox{
+	width: 120rpx;
+	padding-right: 25rpx;
+}
+.uni-lists-item .avatarbox .img{
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 50%;
+}
+.uni-lists-item .avatarbox .ages{
+	text-align: center;
+	font-size: 23rpx;
+}
+.uni-lists-item .aboutbox{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.uni-infobox{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.uni-infobox .info{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.uni-infobox .info view{
+	font-size: 23rpx;
+}
+.uni-infobox .info .name{
+	font-size: 28rpx;
+	color: #333333;
+	margin-bottom: 5rpx;
+}
+.uni-infobox .info .address{
+	height: 30rpx;
+	line-height: 30rpx;
+	overflow: hidden;
+}
+.uni-infobox .info .address .img{
+	width: 19rpx;
+	height: 25rpx;
+	vertical-align: middle;
+	margin-right: 10rpx;
+}
+.uni-infobox .info .address .tit{
+	vertical-align: middle;
+}
+.uni-infobox .contact{
+	width: 140rpx;
+	text-align: center;
+	font-size: 23rpx;
+	border-radius: 30rpx;
+	color: #fff;
+	background-color: #f47505;
+}
+.uni-speciality{
+	overflow: hidden;
+	margin-top: 5rpx;
+}
+.uni-speciality .uni-speciality-item{
+	font-size: 23rpx;
+	float: left;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+	border: 1px solid #818a99;
+	border-radius: 10rpx;
+	padding: 0 8rpx;
+}
+

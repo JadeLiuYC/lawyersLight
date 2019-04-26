@@ -8,5 +8,7 @@
       "disabled": false
     }
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-select": "/components/uni-select/uni-select"
+  }
 }

@@ -15,7 +15,7 @@
 		        </view>
 		    </view>
 		    <view class="btn-row">
-		        <button type="primary" class="primary uni-btn-blocked" @tap="bindLogin">登录</button>
+		        <button type="default" class="primary uni-btn-blocked" @tap="bindLogin">登录</button>
 		    </view>
 		</view>
 	</view>
@@ -54,9 +54,9 @@
 							event: 'mobilelogin'
 						},
 						success: (res) => {
-							console.log(JSON.stringify(res));
+							//console.log(JSON.stringify(res));
 							if(res.data.code == 1){
-								let num = 20;
+								let num = 60;
 								_this.isDisabled = true;
 								let timer = setInterval(function(){
 									if(num > 1){
@@ -121,8 +121,10 @@
 							try {
 								uni.setStorageSync('userInfo', JSON.stringify(res.data.data.userinfo));
 								uni.setStorageSync('token', res.data.data.userinfo.token);
+								var pages = getCurrentPages();
+								var backPage = getCurrentPages()[getCurrentPages().length - 2].route;
 								uni.reLaunch({
-									url:"../ucenter/ucenter"
+									url: "/" + backPage
 								})
 							} catch (e) {
 								// error
@@ -179,8 +181,13 @@
 	.mini-btn:after{
 		border: none;
 	}
-	.uni-btn-blocked{
+	button.uni-btn-blocked{
+		color: #ffffff;
 		font-size: 30upx;
 		margin-top: 80upx;
+		background: #2a5fd6;
+	}
+	.button-hover[type='default']{
+		background: #2A5FD6;
 	}
 </style>

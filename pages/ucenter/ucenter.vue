@@ -71,6 +71,7 @@
 </template>
 
 <script>
+	import config from "../../common/config.js"
 	export default {
 		data() {
 			return {
@@ -107,8 +108,10 @@
 				})
 			},
 			store(){
-				uni.navigateTo({
-					url:"../store/store"
+				config.isLogin(function(){
+					uni.navigateTo({
+						url:"../store/store"
+					})
 				})
 			},
 			message(){
@@ -117,8 +120,10 @@
 				})
 			},
 			upload(){
-				uni.navigateTo({
-					url:"../uploadInfo/uploadInfo"
+				config.isLogin(function(){
+					uni.navigateTo({
+						url:"../uploadInfo/uploadInfo"
+					})
 				})
 			},
 			invite(){

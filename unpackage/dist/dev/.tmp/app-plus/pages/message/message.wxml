@@ -1,1 +1,1 @@
-<view bind:__l="__l"></view>
+<view class="page-body" bind:__l="__l"><view class="inputbox"><view class="tit">写下您的意见或建议</view><textarea class="textarea" name="message" data-event-opts="{{[['input',[['input',['$event']]]]]}}" bindinput="__e"></textarea></view><view class="btnbox"><button class="btn" type="default">提交反馈</button></view></view>

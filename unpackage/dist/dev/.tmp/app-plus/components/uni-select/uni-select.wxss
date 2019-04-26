@@ -1,0 +1,83 @@
+
+.uni-select{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	background-color: #fff;
+	z-index: 99;
+}
+.mask{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 97;
+	background-color: rgba(0,0,0,0.2);
+}
+.uni-select-content{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 98;
+}
+.uni-tabs-select{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 10rpx 0;
+	background-color: #fff;
+	border-bottom: 1px solid #dcdcdc;
+}
+.uni-tab-select{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	font-size: 24rpx;
+}
+.uni-tab-select.active{
+	color: #ff4c01;
+}
+.uni-tab-select.active .tit{
+	color: #ff4c01;
+}
+.uni-tab-select .tit{
+	color: #626a7a;
+	line-height: 50rpx;
+	vertical-align: middle;
+	margin-right: 5rpx;
+}
+.uni-tab-select .uni-icon{
+	font-size: 25rpx;
+	vertical-align: middle;
+}
+.uni-down-select{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0 30rpx;
+	background-color: #fff;
+	max-height: 800rpx;
+	overflow-y: auto;
+}
+.uni-down-item-select{
+	padding: 20rpx 20rpx;
+	border-bottom: 1px solid #dcdcdc;
+	overflow: hidden;
+}
+.uni-down-item-select .uni-icon{
+	color: #ff4c01;
+	width: 30rpx;
+	float: right;
+}
+.uni-down-item-select.active{
+	color: #ff4c01;
+}
+

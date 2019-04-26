@@ -41,8 +41,13 @@ page{
 .mini-btn:after{
 		border: none;
 }
-.uni-btn-blocked{
+button.uni-btn-blocked{
+		color: #ffffff;
 		font-size: 30rpx;
 		margin-top: 80rpx;
+		background: #2a5fd6;
+}
+.button-hover[type='default']{
+		background: #2A5FD6;
 }
 

@@ -1,16 +1,5 @@
 {
   "navigationBarTitleText": "",
   "navigationBarBackgroundColor": "#f8f6f9",
-  "titleNView": {
-    "buttons": [
-      {
-        "float": "right",
-        "text": "保存至相册",
-        "color": "#666666",
-        "fontSize": "13px",
-        "width": "80px"
-      }
-    ]
-  },
   "usingComponents": {}
 }
